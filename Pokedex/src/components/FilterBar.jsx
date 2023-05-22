@@ -24,7 +24,7 @@ export const FilterBar = () => {
           variant="secondary"
           checked={checked[i]}
           name={type}
-          // value={`${i+1}`}
+          value={`label${i}`}
           onChange={handleCheckbox}
         >
           {type}

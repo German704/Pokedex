@@ -28,6 +28,17 @@
 
 body {
 	font-family: 'Montserrat';
+  /* background-image: url("https://www.mundodeportivo.com/alfabeta/hero/2022/11/pokemon-ue.jpeg?width=1200"); */
+  /* background-image: url("/wallpaperbetter.com_1366x768.jpg"); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 45;
 }
 
 .home{
@@ -50,23 +61,45 @@ body {
   width: 95%;
   margin: 0 auto;
 }
-.cardL{
+.List .cardL{
   margin: 10px;
+  position: relative;
 }
-.cardL:hover{
+.List .cardL:hover{
   box-shadow: 0px 0px 20px 5px #ffd900;
   transform: scale(1.07);
   border-radius: 8px;
+  background-color: white;
   transition: all 0.6s;
 }
 .card{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: #00000054;
+  border-color: gold;
+}
+.card .card-body{
+  border-top: 2px rgba(204, 177, 22, 0.692) solid;
+}
+.card:hover{
+  background-color: transparent;
+  transition: 0.6s;
 }
 a{
   text-decoration: none;
   border: none;
+}
+.checkbox{
+  position: absolute;
+  z-index: 15;
+  width: 20px;
+  top: 4px;
+  left: 10px;
+}
+.checkbox input{
+  width: 100%;
+  height: 100%;
 }
 .grass{
   color: white;
@@ -273,7 +306,7 @@ a{
 }
 
 .header-main-pokemon {
-	margin-top: 20px;
+	margin-top: 103px;
   width: 100%;
   max-width: 1100px;
 	display: flex;
@@ -283,9 +316,6 @@ a{
 }
 
 .number-pokemon {
-	/* position: absolute;
-	top: -75px;
-	left: 0; */
 
 	font-size: 130px;
 	font-weight: 700;
@@ -346,6 +376,7 @@ a{
   width: 100%;
   max-width: 1100px;
   margin-top: 14px;
+  margin-bottom: 50px;
 }
 
 .stats {
@@ -394,18 +425,145 @@ a{
 .btn-group div label{
   width: 100%;
 }
-.btn-group .grass0 label:hover{
-  background-color: var(--color-grass) !important;
-}
 
 .trashContainer{
   width: 100%;
   text-align: end;
+  margin-top: 101px;
 }
 .trashContainer button{
   margin-right: 20px;
+  font-size: 24px;
+  border: 2px ;
+  border-radius: 8px;
+}
+.redTrash{
+  background-color: red;
+  box-shadow: 0px 0px 20px 5px rgb(185, 23, 23);
 }
 .none{
   display: none;
 }
-  
+
+.btn-group .grass0 label:hover{
+  background-color: var(--color-grass) !important;
+}
+.btn-group .normal1 label:hover{
+  background-color: var(--color-normal) !important;
+}
+.btn-group .fighting2 label:hover{
+  background-color: var(--color-fighting) !important;
+}
+.btn-group .flying3 label:hover{
+  background-color: var(--color-flying) !important;
+}
+.btn-group .poison4 label:hover{
+  background-color: var(--color-poison) !important;
+}
+.btn-group .ground5 label:hover{
+  background-color: var(--color-ground) !important;
+}
+.btn-group .rock6 label:hover{
+  background-color: var(--color-rock) !important;
+}
+.btn-group .bug7 label:hover{
+  background-color: var(--color-bug) !important;
+}
+.btn-group .ghost8 label:hover{
+  background-color: var(--color-ghost) !important;
+}
+.btn-group .steel9 label:hover{
+  background-color: var(--color-steel) !important;
+}
+.btn-group .fire10 label:hover{
+  background-color: var(--color-fire) !important;
+}
+.btn-group .water11 label:hover{
+  background-color: var(--color-water) !important;
+}
+.btn-group .electric12 label:hover{
+  background-color: var(--color-electric) !important;
+}
+.btn-group .psychic13 label:hover{
+  background-color: var(--color-psychic) !important;
+}
+.btn-group .ice14 label:hover{
+  background-color: var(--color-ice) !important;
+}
+.btn-group .dragon15 label:hover{
+  background-color: var(--color-dragon) !important;
+}
+.btn-group .dark16 label:hover{
+  background-color: var(--color-dark) !important;
+}
+.btn-group .fairy17 label:hover{
+  background-color: var(--color-fairy) !important;
+}
+.btn-group .unknow18 label:hover{
+  background-color: var(--color-unknow) !important;
+}
+.btn-group .shadow19 label:hover{
+  background-color: var(--color-shadow) !important;
+}
+
+/* .btn-group .grass0 .label0{
+  background-color: var(--color-grass) !important;
+}
+.btn-group .normal1 .label1{
+  background-color: var(--color-normal) !important;
+}
+.btn-group .fighting2 .label2{
+  background-color: var(--color-fighting) !important;
+}
+.btn-group .flying3 .label3{
+  background-color: var(--color-flying) !important;
+}
+.btn-group .poison4 .label4{
+  background-color: var(--color-poison) !important;
+}
+.btn-group .ground5 .label5{
+  background-color: var(--color-ground) !important;
+}
+.btn-group .rock6 .label6{
+  background-color: var(--color-rock) !important;
+}
+.btn-group .bug7 .label7{
+  background-color: var(--color-bug) !important;
+}
+.btn-group .ghost8 .label8{
+  background-color: var(--color-ghost) !important;
+}
+.btn-group .steel9 .label9{
+  background-color: var(--color-steel) !important;
+}
+.btn-group .fire10 .label10{
+  background-color: var(--color-fire) !important;
+}
+.btn-group .water11 .label11{
+  background-color: var(--color-water) !important;
+}
+.btn-group .electric12 .label12{
+  background-color: var(--color-electric) !important;
+}
+.btn-group .psychic13 .label13{
+  background-color: var(--color-psychic) !important;
+}
+.btn-group .ice14 .label14{
+  background-color: var(--color-ice) !important;
+}
+.btn-group .dragon15 .label15{
+  background-color: var(--color-dragon) !important;
+}
+.btn-group .dark16 .label16{
+  background-color: var(--color-dark) !important;
+}
+.btn-group .fairy17 .label17{
+  background-color: var(--color-fairy) !important;
+}
+.btn-group .unknow18 .label18{
+  background-color: var(--color-unknow) !important;
+}
+.btn-group .shadow19 .label19{
+  background-color: var(--color-shadow) !important;
+}
+   */

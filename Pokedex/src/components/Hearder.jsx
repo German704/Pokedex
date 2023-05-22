@@ -27,7 +27,7 @@ function Hearder() {
       {[false].map((expand) => (
         <Navbar key={expand} bg="danger"  expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="/"><img src={Logo} alt='' style={{height:"100px"}}/></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={Logo} alt='' style={{height:"50px"}}/></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

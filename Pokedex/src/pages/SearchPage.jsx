@@ -20,7 +20,7 @@ export const SearchPage = () => {
   }
 
   return (
-    <>
+    <div className='home'>
     <TrashPokemons/>
     <span className='filterSpan'>Se encontraron {filtered.length !== 0? filtered.length : filteredPokemons.length} resultados:</span>
     <div className='List'>
@@ -51,6 +51,6 @@ export const SearchPage = () => {
         )
       }
     </div>
-    </>
+    </div>
   )
 }

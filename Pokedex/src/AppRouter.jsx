@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Hearder from './components/Hearder';
 import { PokemonPage } from './pages/PokemonPage';
 import Home from './pages/Home';
-import { SearchPage } from './pages/searchPage';
+import { SearchPage } from './pages/SearchPage';
 
 export const AppRouter = () => {
   return (

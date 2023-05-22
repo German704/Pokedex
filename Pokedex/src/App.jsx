@@ -7,7 +7,7 @@ function App() {
 
   return (
     <GetPokemons>
-      <AppRouter/>;
+      <AppRouter/>
     </GetPokemons>
   )
 }

@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 
 export const TrashPokemons = () => {
 
+  const btnTrash = document.querySelector(".trash");
     const handleSelect = (e) => {
       const checkForTrash = document.querySelectorAll("#checkForTrash");
+      btnTrash.classList.toggle("redTrash");
       checkForTrash.forEach(element => {
         element.classList.toggle("none");
         const card = document.querySelector(`#${element.value}`);

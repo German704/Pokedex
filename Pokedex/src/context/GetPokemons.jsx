@@ -110,6 +110,7 @@ const GetPokemons = ({children}) => {
     
     const handleCheckbox = (e) => {
         let targetName = e.target.name.toLowerCase();
+        
         setTypeSelected({
             ...typeSelected,
             [targetName]: e.currentTarget.checked
