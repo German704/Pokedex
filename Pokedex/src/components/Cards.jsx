@@ -4,18 +4,23 @@ import Card from 'react-bootstrap/Card';
 function Cards({id, name, image, weight, types}) {
 
   return (
+    <div id={`${name}_${id}`}>
+    <div>
+      <input type="checkbox" id='checkForTrash' className='none' value={`${name}_${id}`} /* onChange={handleChange} *//>
+    </div>
     <Link to={`/pokemon/${id}`} className='cardL'>
-    <Card style={{ width: '18rem',margin: "3px",borderRadius:"8px" }}>
+    <Card style={{ width: '17rem',margin: "3px",borderRadius:"8px" }}>
       <Card.Img variant="top" src={image} alt={name} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text style={{fontSize: "14px"}}>Peso: {weight}</Card.Text>
-        <Card.Text style={{margin: "15px"}}>
+        <Card.Text style={{margin: "15px", textAlign: "center"}}>
           { types.map(type => <span key={type.type.name} className={type.type.name}>{type.type.name}</span>) } 
         </Card.Text> 
       </Card.Body>
     </Card>
     </Link>
+    </div>
   );
 }
 

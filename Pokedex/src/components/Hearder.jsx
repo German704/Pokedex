@@ -50,7 +50,7 @@ function Hearder() {
                   />
                   <Button variant="outline-success" type='submit'>Search</Button>
                 </Form>
-                <FilterBar/>
+                <FilterBar key={"filterbar"}/>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

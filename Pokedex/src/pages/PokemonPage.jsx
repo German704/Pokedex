@@ -61,7 +61,7 @@ export const PokemonPage = () => {
 								<div className='group-info'>
 									<p>Habilidades</p>
                   {pokemon.abilities.map(value => (
-									<span>{value.ability.name}</span>
+									<span key={value.ability.name}>{value.ability.name}</span>
                   ))}
 								</div>
 							</div>

@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import {ClientAxios} from '../config/ClientAxios';
-import axios from 'axios';
 import { useForm } from '../hooks/useForm';
 
 const PokeContext = createContext();
@@ -25,7 +24,7 @@ const GetPokemons = ({children}) => {
                         "Content-Type": "application/json",
                     }
                 });
-
+                
                 const promises = data.results.map(async (pokemon) => {
                     const res = await fetch(pokemon.url);
                     const data = await res.json();
@@ -71,7 +70,6 @@ const GetPokemons = ({children}) => {
 
         getGlobalPokemons();
     }, [])
-    
     const getPokemonById = async (id) => {
         try {
             const {data} = await ClientAxios.get(`pokemon/${id}`, { headers: {
